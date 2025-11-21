@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Your Name</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">Your Name</a>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>About</h1>
+      <p>Write a short bio here. Include your background, what you build, and the impact you focus on.</p>
+
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Job Title — Company</strong>
+          <div class="hint">Dates • City</div>
+          <p>One or two bullet sentences about achievements and responsibilities.</p>
+        </li>
+      </ul>
+
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Degree</strong> — Institution (Year)</li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name</p>
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
