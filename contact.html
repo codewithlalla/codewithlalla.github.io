@@ -29,22 +29,24 @@
 
           <form class="contact-form card" action="https://formspree.io/f/your-form-id" method="POST">
             <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Your name" required />
+            <input id="name" name="name" placeholder="Your name" aria-required="true" required />
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <input id="email" name="email" type="email" placeholder="you@example.com" aria-required="true" required />
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="How can I help?" aria-required="true" required></textarea>
 
             <button class="button" type="submit">Send message</button>
+
+            <p class="hint" role="status">After you submit, you’ll be redirected by Formspree. Replace the form ID to start receiving messages.</p>
           </form>
         </div>
 
         <aside class="card">
           <h3>Other ways to connect</h3>
-          <p class="meta">GitHub: <a href="#">your-username</a></p>
-          <p class="meta">LinkedIn: <a href="#">your-profile</a></p>
+          <p class="meta">GitHub: <a href="#">github.com/your-username</a></p>
+          <p class="meta">LinkedIn: <a href="#">linkedin.com/in/your-profile</a></p>
           <p class="hint">Replace the links and Formspree ID with your real values to receive messages.</p>
         </aside>
       </div>
