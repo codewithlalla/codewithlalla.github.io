@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Projects — Your Name</title>
+    <meta name="description" content="A selection of projects built by Your Name." />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
@@ -15,26 +16,31 @@
           <a href="/about.html">About</a>
           <a href="/contact.html">Contact</a>
         </nav>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
       </div>
     </header>
 
     <main class="container">
       <h1>Projects</h1>
-      <p>Replace the examples below with your own projects. Include links to repos, live demos, and short summaries.</p>
+      <p>Below are selected projects. Replace these examples with your own projects, links, and descriptions.</p>
 
       <div class="project-grid">
         <article class="project">
           <h3>Project One</h3>
-          <p>Stack: JavaScript, HTML, CSS</p>
-          <p>Short summary of the project and what problem it solves.</p>
-          <p><a href="#">Repository</a> • <a href="#">Live demo</a></p>
+          <p class="meta">React • Node • PostgreSQL</p>
+          <p>A web application that solves X for Y. I implemented the frontend, API, and CI pipeline. <a href="#">Repository</a> • <a href="#">Live</a></p>
         </article>
 
         <article class="project">
           <h3>Project Two</h3>
-          <p>Stack: React, Node</p>
-          <p>Short summary of the project and your contributions.</p>
-          <p><a href="#">Repository</a> • <a href="#">Live demo</a></p>
+          <p class="meta">Static • JAMstack</p>
+          <p>Marketing site and docs for a product, built with static generation and deployed to a CDN. <a href="#">Repository</a> • <a href="#">Live</a></p>
+        </article>
+
+        <article class="project">
+          <h3>Open Source Tool</h3>
+          <p class="meta">npm • Testing</p>
+          <p>Small library or CLI used by X developers. Includes tests and examples. <a href="#">Repository</a></p>
         </article>
       </div>
     </main>

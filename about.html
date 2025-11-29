@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>About — Your Name</title>
+    <meta name="description" content="About me, experience and skills." />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
@@ -15,26 +16,46 @@
           <a href="/projects.html">Projects</a>
           <a href="/contact.html">Contact</a>
         </nav>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
       </div>
     </header>
 
     <main class="container">
       <h1>About</h1>
-      <p>Write a short bio here. Include your background, what you build, and the impact you focus on.</p>
+      <div class="two-col">
+        <div>
+          <p>Hello — I'm <strong>Your Name</strong>, a developer who builds accessible, performant web applications. I focus on modern front-end development, API design, and developer tooling. I enjoy working across the stack and mentoring others.</p>
 
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Job Title — Company</strong>
-          <div class="hint">Dates • City</div>
-          <p>One or two bullet sentences about achievements and responsibilities.</p>
-        </li>
-      </ul>
+          <h2>Experience</h2>
+          <ul>
+            <li>
+              <strong>Senior Developer — Acme Co.</strong>
+              <div class="hint">2022 – Present • Remote</div>
+              <p>Worked on core product features, improved performance by X%, and led a small frontend team.</p>
+            </li>
+            <li>
+              <strong>Software Engineer — Example Inc.</strong>
+              <div class="hint">2019 – 2022 • City</div>
+              <p>Built backend services and integrations, improved CI pipelines, and launched multiple customer-facing features.</p>
+            </li>
+          </ul>
+        </div>
 
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Degree</strong> — Institution (Year)</li>
-      </ul>
+        <aside class="card">
+          <h3>Resume & Links</h3>
+          <p class="meta"><a href="#">Download resume (PDF)</a></p>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Testing</li>
+            <li>Design systems</li>
+          </ul>
+          <h4>Social</h4>
+          <p class="meta"><a href="#">GitHub</a> • <a href="#">LinkedIn</a></p>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer">
