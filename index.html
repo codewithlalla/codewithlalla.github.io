@@ -22,7 +22,7 @@
     </header>
 
     <main class="container">
-      <section class="hero">
+      <section class="hero animate-in">
         <div class="hero-left">
           <h1>Hi — I'm <strong>Your Name</strong></h1>
           <p class="lead">Frontend &amp; full-stack developer crafting fast, accessible web apps.</p>
@@ -48,15 +48,15 @@
         </aside>
       </section>
 
-      <section class="skills">
+      <section class="skills section">
         <h2>Skills</h2>
         <ul class="skill-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Python</li>
+          <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3"/></svg></span>HTML</li>
+          <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg></span>CSS</li>
+          <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg></span>JavaScript</li>
+          <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l10 6-10 6-10-6z"/></svg></span>React</li>
+          <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h10v16H7z"/></svg></span>Node.js</li>
+          <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 7-9 11-9-11z"/></svg></span>Python</li>
         </ul>
         <p class="hint">Replace these with your primary technologies and tools.</p>
       </section>
@@ -70,7 +70,7 @@
         <p class="hint">Fill in your positions, companies, and short accomplishments.</p>
       </section>
 
-      <section class="projects-teaser">
+      <section class="projects-teaser section">
         <h2>Featured Projects</h2>
         <div class="project-grid">
           <article class="project">
@@ -110,6 +110,11 @@
         if(nav.style.display === 'flex') nav.style.display = '';
         else nav.style.display = 'flex';
       });
+      // Reveal sections on scroll
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+      }, {threshold: 0.1});
+      document.querySelectorAll('.section').forEach(function(el){ observer.observe(el); });
     </script>
   </body>
 </html>

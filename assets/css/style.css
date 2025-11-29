@@ -9,6 +9,7 @@
 	--glass: rgba(255,255,255,0.04);
 	--maxw: 1100px;
 	--radius: 10px;
+	--shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
 *{box-sizing:border-box}
@@ -26,6 +27,7 @@ body{
 .site-header{backdrop-filter:blur(6px);background:transparent}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
 .brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.05rem}
+.brand:hover{filter:brightness(1.2)}
 
 .nav{display:flex;gap:1rem;align-items:center}
 .nav a{color:var(--muted);text-decoration:none;padding:.35rem .5rem;border-radius:6px}
@@ -36,9 +38,11 @@ body{
 .hero{display:grid;grid-template-columns:1fr 340px;gap:2rem;align-items:center;padding:3rem 0}
 .hero-left h1{margin:.1rem 0;font-size:2.1rem;line-height:1.05}
 .lead{color:var(--muted);margin:.6rem 0 1.25rem}
-.button{display:inline-block;padding:.6rem 1rem;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#022; border-radius:8px;text-decoration:none;font-weight:600}
+.button{display:inline-block;padding:.6rem 1rem;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#022; border-radius:8px;text-decoration:none;font-weight:600;transition:transform .2s ease, filter .2s ease}
+.button:hover{transform:translateY(-1px);filter:saturate(120%)}
 
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:1rem;border-radius:var(--radius)}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,0.35)}
 
 .skills{margin:2rem 0}
 .skill-list{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
@@ -46,9 +50,20 @@ body{
 
 .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
 .project{padding:1rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+.project{position:relative;overflow:hidden}
+.project::after{content:"";position:absolute;inset:auto -40% -40% auto;width:160px;height:160px;background:radial-gradient(closest-side, rgba(124,58,237,0.25), transparent 70%);transform:rotate(25deg)}
+.project{transition:transform .2s ease,border-color .2s ease}
+.project:hover{transform:translateY(-2px);border-color:rgba(255,255,255,0.08)}
 .project h3{margin:.1rem 0}
 .meta{color:var(--muted);font-size:.9rem}
 .project img{width:100%;height:150px;object-fit:cover;border-radius:8px;margin:.25rem 0 .6rem}
+.icon{display:inline-block;width:18px;height:18px;vertical-align:-3px;margin-right:.35rem;opacity:.9}
+.icon svg{width:100%;height:100%}
+.section{opacity:0; transform:translateY(10px);}
+.section.visible{opacity:1; transform:none; transition:opacity .5s ease, transform .5s ease}
+
+@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.animate-in{animation:fadeInUp .6s ease both}
 
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 
